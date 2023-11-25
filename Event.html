@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="css/carousel.css" rel="stylesheet">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      width: 100%;
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+    nav a:hover,
+    nav a:focus {
+      background-color: #ddd;
+      color: #333;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .btn-bd-primary {
+      --bd-violet-bg: #712cf9;
+      --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+      --bs-btn-font-weight: 600;
+      --bs-btn-color: var(--bs-white);
+      --bs-btn-bg: var(--bd-violet-bg);
+      --bs-btn-border-color: var(--bd-violet-bg);
+      --bs-btn-hover-color: var(--bs-white);
+      --bs-btn-hover-bg: #6528e0;
+      --bs-btn-hover-border-color: #6528e0;
+      --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+      --bs-btn-active-color: var(--bs-btn-hover-color);
+      --bs-btn-active-bg: #5a23c8;
+      --bs-btn-active-border-color: #5a23c8;
+    }
+
+    .bd-mode-toggle {
+      z-index: 1500;
+    }
+
+    .bd-mode-toggle .dropdown-menu .active .bi {
+      display: block !important;
+    }
+
+    .text-center img {
+      width: 40rem;
+      height: 29rem;
+    }
+
+    .text-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 96%;
+      margin-bottom: 2rem;
+      margin-left: 3%;
+      margin-right: 3%;
+    }
+
+    .Festival {
+      color: black;
+      margin-left: 0rem;
+      width: 40rem;
+      height: 30rem;
+    }
+
+    .Festival h1 {
+      font-size: 3rem;
+      position: relative;
+      bottom: 3.9rem;
+    }
+
+    .Fest p {
+      font-size: 1.1rem;
+      width: 40rem;
+      margin-left: 0rem;
+      text-align: center;
+      position: absolute;
+      right: 1rem;
+      top: 11rem;
+    }
+
+    img {
+      border-radius: 8%;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .F1 p {
+      font-size: 1.1rem;
+      top: 60rem;
+      width: 40rem;
+      margin-left: 1rem;
+      text-align: center;
+      position: absolute;
+      right: 1rem;
+    }
+
+    .tenda p {
+      font-size: 1.3rem;
+      top: 106rem;
+      width: 40rem;
+      margin-left: 1rem;
+      text-align: center;
+      position: absolute;
+      right: 1rem;
+    }
+
+    .aquabike p {
+      font-size: 1.3rem;
+      top: 151rem;
+      width: 40rem;
+      margin-left: 1rem;
+      text-align: center;
+      position: absolute;
+      right: 1rem;
+    }
+    .dropdown-menu li a:hover{
+      background-color: #f1f1f1;
+    }
+  </style>
+
+
+  <link href="heroes.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse nav justify-content-center" id="navbarNav">
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active text-dark" aria-current="page" href="Beranda.html">Beranda</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Destinasi Wisata
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="Wisata/Bukit_Singgolom.html">Bukit Singgolom</a></li>
+              <li><a class="dropdown-item" href="Wisata/Destinasi Wisata Bukit_Gibeon.html">Bukit Gibeon</a></li>
+              <li><a class="dropdown-item" href="Wisata/Destinasi Wisata Geopark Kaldera Toba.html">Geopark Kaldera Toba</a></li>
+              <li><a class="dropdown-item" href="Wisata/Destinasi Wisata Pantai Pakkodian.html">Pantai Pakkodian</a></li>
+              <li><a class="dropdown-item" href="Wisata/Destinasi Wisata Sunset Beach.html">Sunset Beach</a></li>
+              <li><a class="dropdown-item" href="Wisata/Destinasi Wisata Taman Eden 100.html">Taman Eden 100</a></li>
+              <li><a class="dropdown-item" href="Wisata/Pantai_Pardinggaran.html">Pantai Pardinggaran</a></li>
+              <li><a class="dropdown-item" href="Wisata/Pasput.html">Pantai Pasir Putih Parparean</a></li>
+              <li><a class="dropdown-item" href="Wisata/Wisata Situmurun.html">Air Terjun Situmurun</a></li>
+              <li><a class="dropdown-item" href="Wisata/Destinasi Wisata Batu Gantung.html">Batu Gantung</a></li>
+              <li><a class="dropdown-item" href="Wisata/Destinasi Wisata Arung Jeram Parhitean.html">Arung Jeram Parhitean</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Akomodasi
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="Akomodasi/Singgolom.html">Bukit Singgolom</a></li>
+              <li><a class="dropdown-item" href="Akomodasi/Gibeon.html">Bukit Gibeon</a></li>
+              <li><a class="dropdown-item" href="Akomodasi/Kaldera.html">Geopark Kaldera Toba</a></li>
+              <li><a class="dropdown-item" href="Akomodasi/Pakkodian.html">Pantai Pakkodian</a></li>
+              <li><a class="dropdown-item" href="Akomodasi/Sunset.html">Sunset Beach</a></li>
+              <li><a class="dropdown-item" href="Akomodasi/Taman Eden.html">Taman Eden 100</a></li>
+              <li><a class="dropdown-item" href="">Pantai Pardinggaran</a></li>
+              <li><a class="dropdown-item" href="Akomodasi/Pasput.html">Pantai Pasir Putih Parparean</a></li>
+              <li><a class="dropdown-item" href="Akomodasi/Situmurun.html">Air Terjun Situmurun</a></li>
+              <li><a class="dropdown-item" href="Akomodasi/Batu Gantung.html">Batu Gantung</a></li>
+              <li><a class="dropdown-item" href="Akomodasi/Arum Jeram Parhitean.html">Arung Jeram Parhitean</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="Kuliner.html">Kuliner</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="Event.html">Event</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#">Tentang Kami</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+  <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
+      aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+      <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+        <use href="#circle-half"></use>
+      </svg>
+      <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+    </button>
+  </div>
+
+
+  <main>
+
+
+    <div class="px-4 py-5 my-5 text-center">
+      <img class="d-block mx-auto mb-4" src="images/festival-danau-toba.jpg" alt="" width="72" height="57">
+      <div class="Festival">
+        <h1 class="display-5 fw-bold text-body-emphasis">Festival Danau Toba</h1>
+        <div class="col-lg-6 mx-auto Fest">
+          <p class="lead mb-4">Festival Danau Toba merupakan acara budaya yang diadakan di sekitar Danau Toba, salah
+            satu danau vulkanik terbesar di dunia, yang terletak di Provinsi Sumatera Utara, Indonesia. Festival ini
+            dirancang untuk mempromosikan kekayaan budaya, seni, dan pariwisata daerah sekitar Danau Toba. Beberapa
+            elemen yang umumnya terdapat dalam Festival Danau Toba melibatkan pertunjukan seni tradisional, pameran
+            kerajinan tangan, upacara adat, kompetisi seni, dan konser musik.
+
+            Selain itu, festival ini juga menyajikan kuliner khas Batak dan berbagai kegiatan rekreasi, seperti olahraga
+            air dan pertunjukan kapal tradisional. Selama acara, para peserta dan pengunjung dapat merasakan keindahan
+            alam Danau Toba, bersosialisasi dengan masyarakat setempat, dan mengenal lebih dekat kekayaan budaya Batak.
+
+            Festival Danau Toba biasanya menjadi magnet bagi wisatawan lokal maupun internasional yang ingin menikmati
+            keindahan alam, keberagaman budaya, dan pesona tradisional yang dimiliki oleh masyarakat di sekitar Danau
+            Toba. Acara ini juga menjadi peluang untuk mempromosikan pariwisata, meningkatkan kesadaran akan warisan
+            budaya, serta mendukung perekonomian lokal. </p>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="b-example-divider"></div>
+
+    <div class="px-4 py-5 my-5 text-center">
+      <img class="d-block mx-auto mb-4" src="images/f1h20-danau-toba.jpg" alt="" width="72" height="57">
+      <div class="Festival">
+        <h1 class="display-5 fw-bold text-body-emphasis">F1 PowerBoat Championship</h1>
+        <div class="col-lg-6 mx-auto F1">
+          <p class="lead mb-4">F1H2O adalah Kejuaraan Dunia Perahu Motor Formula 1. Kejuaraan Dunia ini dilombakan Union
+            Internationale Motonautique (UIM) dan dipromosikan H2O Racing.
+
+            Hal tersebut menjadikan alasan mengapa nama perlombaan ini menggunakan H2O. F1 PowerBoat Lake Toba menjadi
+            sebutan seksi, mengingat Danau Toba mencatatkan sejarah penyelenggaraan edisi ke-40.
+
+            Balapan perahu motor air dengan kecepatan tinggi dapat mencapai kecepatan 200-240 kilometer per jam. F1H2O
+            pertama kalinya diselenggarakan pada tahun 1984.
+
+            F1H2O merupakan olahraga bergaya grand pix. Dulunya dikenal sebagai Kejuaraan Dunia dari FONDA World Grand
+            Prix Series.
+
+            Hingga kini, F1H2O tercatat telah digelar di 39 negara. Persaingan ketat pembalap dunia terjadi antara tim
+            OMC dan Mercury, sebagai dua kandidat terkuat dalam F1H2O.</p>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="b-example-divider"></div>
+
+    <div class="px-4 py-5 my-5 text-center">
+      <img class="d-block mx-auto mb-4" src="images/1000-tenda.jpg" alt="" width="72" height="57">
+      <div class="Festival">
+        <h1 class="display-5 fw-bold text-body-emphasis">1000 Tenda Kaldera Toba Festival</h1>
+        <div class="col-lg-6 mx-auto tenda">
+          <p class="lead mb-4">Festival 1000 Tenda Kaldera Toba ini bertujuan untuk memperkenalkan Desa Meat sebagai
+            destinasi wisata baru yang menawarkan keindahan alam Danau Toba serta menggerakkan perekonomian desa melalui
+            pariwisata. Festival ini menawarkan rangkaian kegiatan yang sangat menarik yaitu berkemah di desa yang
+            berada tepian danau dengan suasana yang sejuk dan pemandangan sawah, serta belajar adat istiadat dan seni
+            budaya Batak dari masyarakat desa setempat</p>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+    <div class="b-example-divider"></div>
+
+    <div class="px-4 py-5 my-5 text-center">
+      <img class="d-block mx-auto mb-4" src="images/aquabike.jpeg" alt="" width="72" height="57">
+      <div class="Festival">
+        <h1 class="display-5 fw-bold text-body-emphasis">Aquabike World Championship</h1>
+        <div class="col-lg-6 mx-auto aquabike">
+          <p class="lead mb-4">Aquabike World Championship merupakan ajang balapan jetski yang diorganisir oleh H2O
+            Racing Ltd yang mewakili Union Internationale Motonautique (UIM). Ajang ini telah terselenggara sejak 1992.
+            Event Aquabike World Championship 2023 di Danau Toba akan dimulai 22 -26 November 2023. Kegiatan digelar di
+            empat wilayah kabupaten di kawasan Danau Toba yakni Karo, Dairi, Samosir dan Toba.
+
+            Sebanyak 118 riders dari 20 negara akan hadir memanaskan persaingan dari negara-negara di luar negeri.
+            Sementara itu, event internasional tersebut juga diikuti 10 riders lokal dalam negeri.
+
+            Perhelatan Aquabike World Championship yang berlangsung akhir tahun ini bakal mengukir prestasi sejarah baru
+            di Danau Toba. Sebab, penyelenggaraan kali ini pertama dilakukan di danau terbesar vulkanis terbesar dunia.
+          </p>
+        </div>
+
+
+      </div>
+    </div>
+
+  </main>
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
