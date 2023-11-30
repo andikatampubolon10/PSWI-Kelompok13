@@ -1,161 +1,337 @@
-<!DOCTYPE html>
-<html lan="en">
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
 
 <head>
+  <script src="../assets/js/color-modes.js"></script>
+
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.118.2">
+  <title>Akomodasi</title>
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      width: 100%;
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .btn-bd-primary {
+      --bd-violet-bg: #712cf9;
+      --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+      --bs-btn-font-weight: 600;
+      --bs-btn-color: var(--bs-white);
+      --bs-btn-bg: var(--bd-violet-bg);
+      --bs-btn-border-color: var(--bd-violet-bg);
+      --bs-btn-hover-color: var(--bs-white);
+      --bs-btn-hover-bg: #6528e0;
+      --bs-btn-hover-border-color: #6528e0;
+      --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+      --bs-btn-active-color: var(--bs-btn-hover-color);
+      --bs-btn-active-bg: #5a23c8;
+      --bs-btn-active-border-color: #5a23c8;
+    }
+
+    .bd-mode-toggle {
+      z-index: 1500;
+    }
+
+    .bd-mode-toggle .dropdown-menu .active .bi {
+      display: block !important;
+    }
+
+    .col {
+      display: flex;
+
+    }
+
+    .end {
+      margin-left: 40rem;
+    }
+
+    .container {
+      background-color: antiquewhite;
+    }
+  </style>
+
 
 </head>
 
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary z-index-2">
-      <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse nav justify-content-center" id="navbarNav">
-          <ul class="nav justify-content-center">
-            <li class="nav-item">
-              <a class="nav-link active text-dark" aria-current="page" href="#">Beranda</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark" href="#">Destinasi Wisata</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark" href="#">Akomodasi & Transportasi</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark" href="#">Kuliner</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark" href="#">Event</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark" href="#">Tentang Kami</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <section id="contact" class="contact" style="margin-top: 100px">
-    <div class="container" data-aos="fade-up">
-      <div class="section-title">
-        <h2>Hotel dan Penginapan</h2>
-      </div>
 
-      <div class="row">
-        <div class="col-lg-12 d-flex align-items-stretch">
-          <div class="row info">
-            <div class="col-lg-5 mt-5 mt-lg-0 d-flex align-items-stretch">
-              <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-                <ol class="carousel-indicators">
-                  <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
-                  <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
-                  <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="gambar/1.jpg" alt="Slide 1" class="d-block w-100" />
-                  </div>
-                  <div class="carousel-item">
-                    <img src="gambar/2.jpeg" alt="Slide 2" class="d-block w-100" />
-                  </div>
-                  <div class="carousel-item">
-                    <img src="gambar/3.jpeg" alt="Slide 3" class="d-block w-100" />
-                  </div>
+
+  <div class="album py-5 bg-body-tertiary">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="gambar/bagus1.jpg" width="90%"" heigh=" 50%">
+            <div class="card-body">
+              <p class="card-text">
+              <h5>1. Bagus Bay Guest House</h5>
+              Bagus Bay Homestay menawarkan akomodasi dengan area tempat duduk di Tuk Tuk. Guest house ini menyediakan
+              parkir pribadi gratis, keamanan sepanjang hari, dan Wi-Fi gratis. Akomodasi ini menyediakan kamar keluarga
+              dan teras. Setiap unit di guest house ini dilengkapi dengan seprai dan handuk. Anda dapat bersantap di
+              restoran hotel yang ramah keluarga, yang buka untuk makan malam, brunch, dan koktail. Anda dapat bermain
+              biliar di guest house. Anda juga dapat bersantai di taman.
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="Bagus Bay.html"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
                 </div>
-                <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </a>
-              </div>
-            </div>
-
-            <div class="col mt-5 mt-lg-5">
-              <div class="name">
-                <h4 class="title">1. Grand Mareda Hotel</h4>
-              </div>
-
-              <div class="name">
-                <h4>Overview</h4>
-                <p>
-                  Grand Mareda Hotel, hadir sebagai konsep hotel budgeting.<br>
-                  Dengan harga yang relatif murah, Grand Mareda tetap mengutamakan kenyamanan bagi pengunjung yang
-                  datang dan bermalam di Grand Mareda Hotel.<br>
-                  Dan tentu saja, hotel ini terbuka untuk semua. <br>
-                  Memiliki -16 ruangan yang tentunya nyaman bagi semua. <br>
-                  Dilengkapi dengan berbagai fasilitas yang lengkap, seperti: Jasa jemput ke bandara, AC, catering
-                  mandiri, ketel listrik, TV layar datar dan masih banyak lagi.
-                </p>
-              </div>
-
-              <div class="name">
-                <h4>Lokasi</h4>
-                <p><br>
-                  Berjarak kurang lebih 25 menit jika berjalan dari Tugu D.I Panjaitan.
-                </p>
-              </div>
-
-              <div class="name">
-                <h4>Good to Know</h4>
-                <h4 class="highlight" style="color: rgb(28, 23, 23)">Check-in : 12.00 - 14.00<br>
-                  Check-out : 12.00 - 14.00</h4>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <footer <div class="container text-center text-md-left">
-    <div class="row text-center text-md-left me-5">
-      <div class="info">
-        <div class="info-left">
-          <div class="kiri">
-            <h5 class="d-flex flex-column text-uppercase mb-4 font-weight-bold text-warning">
-              Grand Mareda Hotel
-            </h5>
-            <p>
-              Hubungi Kami untuk Info Lebih Lanjut
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="gambar/juma2.jpg" width="87%"" heigh=" 50%">
+            <div class="card-body">
+              <p class="card-text">
+              <h5>2.Juma Cottages</h5>
+              Juma cottage adalah sebuah guest house ramah lingkungan yang terletak di Tuk Tuk, dan memiliki taman.
+              Terdapat restoran di tempat dan parkir pribadi gratis. Di guest house, unit-unitnya dilengkapi dengan
+              balkon. Unit-unitnya dilengkapi dengan kamar mandi pribadi dan teko, sementara beberapa kamar dilengkapi
+              dengan teras dan yang lainnya juga memiliki pemandangan pegunungan. Nikmati liburan Anda dengan orang
+              tercinta bersama Juma Cottages.
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="Juma.html"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="gambar/nasha1.jpeg" width="90%"" heigh=" 50%">
+            <div class="card-body">
+              <p class="card-text">
+              <h5>3. My Nasha Tigaras</h5>
+              Nasha Tigaras simalungun saya terletak di daerah Tigaras-Simalungun. Terdapat beberapa tempat menarik di
+              sekitarnya, seperti bukit indah Simarjarunjung yang
+              berjarak sekitar 1,38 km. Nasha Tigaras saya adalah tempat menginap sempurna yang menyediakan fasilitas
+              layak serta layanan hebat. Meja depan 24 jam tersedia untuk melayani Anda, mulai dari check-in hingga
+              check-out, atau bantuan apa pun yang Anda
+              perlukan.Nasha Tigaras saya adalah pilihan ideal bagi Anda yang mencari kenyamanan.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="My Nasha.html"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="gambar/agung1.jpeg" width="90%"" heigh=" 50%">
+            <div class="card-body">
+              <p class="card-text">
+              <h5>4.Darma Agung Beach Hotel</h5>
+              Darma Agung Beach Hotel, mewarkan berbagai fasilitas dan kenyamanan. Kamar tamu menawarkan fasilitas
+              seperti kulkas, dan tamu dapat terhubung dengan internet menggunakan akses internet yang ditawarkan oleh
+              hotel. Darma Agung Beach Hotel menawarkan layanan kamar dan layanan concierge, sehingga pengalaman
+              menginap Anda lebih menyenangkan. Properti ini juga menawarkan restoran di tempat. Jika Anda suka makanan
+              Asia, Darma Agung Beach Hotel terletak dekat Restoran Istana Minang, LaToSu Cafe & Resto, dan WinTie
+              Coffee Shop. Staf di Darma Agung Beach Hotel berharap dapat melayani Anda selama kunjungan Anda mendatang.
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="Darma Agung.html"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="gambar/patra3.jpeg" width="95%"" heigh=" 50%">
+            <div class="card-body">
+              <p class="card-text">
+              <h5>5. Patra Comfort Parapat</h5>
+              Patra Comfort Parapat adalah pilihan terbaik bagi wisatawan yang mengunjungi Parapat, menawarkan banyak
+              fasilitas berguna yang dirancang untuk menyempurnakan pengalaman menginap Anda. Wi-fi gratis ditawarkan
+              untuk para tamu, dan kamar di Patra Comfort Parapat memiliki penyejuk udara dan meja. Selama Anda
+              menginap, gunakan fasilitas yang ditawarkan, seperti layanan kamar, layanan concierge, dan teras terbuka.
+              Tamu Patra Comfort Parapat juga dapat menikmati kolam renang dan restoran di properti. Bagi wisatawan yang
+              datang dengan mobil, tersedia parkir gratis. Jika Anda suka makanan cina, Patra Comfort Parapat terletak
+              dekat LaToSu Cafe & Resto. Nikmati masa menginap Anda di Parapat.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="Patra.html"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="gambar/sibigo1.jpeg" width="90%"" heigh=" 50%">
+            <div class="card-body">
+              <p class="card-text">
+              <h5>6.OYO 2379 Hotel Sibigo</h5>
+              Lakukan perjalanan terbaik Anda ke Samosir dengan standar Sanitized Stays yang dijanjikan, dan nikmati
+              Wi-Fi gratis di semua kamar. Berlokasi strategis di Samosir bagian Barat Samosir, yang menempatkan
+              Anda dekat dengan atraksi dan pilihan tempat makan yang menarik. Bonus tambahan, restoran
+              disediakan di lokasi untuk melayani kebutuhan Anda. Terletak di tepi Danau Toba, hotel ini
+              cukup baik dengan pemandangan danau toba yang indah. Kamarnya tergolong bersih dan harga kamarnya
+              tergolong sangat murah dan sudah termasuk sarapan Nasi Goreng.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="Sibigo.html"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="gambar/inn1.jpeg" width="90%"" heigh=" 50%">
+            <div class="card-body">
+              <p class="card-text">
+              <h5>7. Toledo Inn</h5>
+              Toledo Inn memiliki taman, teras, restoran, dan bar di Tuk Tuk. Wi-Fi gratis dan layanan kamar juga
+              disediakan. Setiap kamar di hotel ini dilengkapi dengan lemari pakaian. Setiap kamar memiliki kamar mandi
+              pribadi dengan shower, sementara kamar-kamar tertentu memiliki balkon dan yang lainnya juga menampilkan
+              pemandangan pegunungan. Di Toledo Inn, kamar-kamarnya mencakup meja dan TV layar datar. Pilihan sarapan
+              Asia dan halal tersedia setiap hari di akomodasi. Bandara terdekat adalah Bandara Internasional
+              Sisingamangaraja XII, 130 km dari Toledo Inn.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="Toledo Inn.html"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="gambar/Tabo1.jpeg" width="90%"" heigh=" 50%">
+            <div class="card-body">
+              <p class="card-text">
+              <h5>8. Tabo Cottages Tuktuk Lake Toba </h5>
+              Tabo Cottages adalah hotel yang natural dengan pekarangan hijau yang luas dan kamar sebahagian dari bahan
+              daur ulang dari rumah tradisional. Terdapat pondok untuk santai dan menikmati
+              pemandangan danau dan gunung, Restoran dan bakery jerman . Makanan spesial adalah prasmanan
+              dengan khas lokal dan barat. Kopi adalah salah satu produk yang sangat kami banggakan karena kami
+              memanggang biji kopi lokal sendiri, maka kopi di Tabo sangat segar dan harum. Sering juga kami adakan aksi
+              linkungan bersama tamu2 dan coba
+              memperbaiki linkungan dan fasilitas seperti jalur treking secara relawan.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="Tabo.html"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="gambar/judita.jpeg" width="94%"" heigh=" 50%">
+            <div class="card-body">
+              <p class="card-text">
+              <h5>9. Judita Cottage </h5>
+              Judita Cottage memiliki area pantai pribadi, kolam renang outdoor, dan tempat parkir di areanya serta
+              kamar mandi pribadi. Akomodasi ini menampilkan pemandangan gunung dan danau. Akomodasi ini menyediakan
+              resepsionis 24 jam, antar-jemput bandara, dapur bersama, dan Wi-Fi gratis. Beberapa akomodasi memiliki
+              teras dan TV satelit layar datar,
+              serta area tempat duduk. Guest house ini menyajikan sarapan ala Amerika dan Asia, dan sarapan di kamar
+              juga tersedia. Terdapat sebuah kedai kopi,
+              dan tersedia makan siang. Anda dapat bermain tenis meja atau menyewa
+              sepeda dan mobil, sementara bersepeda dan memancing dapat dinikmati di dekatnya.
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="Judita.html"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </main>
+
+        <footer class="text-body-secondary py-5">
+          <div class="container">
+            <p class="float-end mb-1">
+              <a href="#">Back to top</a>
             </p>
-            <h2>0823-6228-5220</h2>
+            <div class="end">
+              <p>Akomodasi @2023</p>
+            </div>
           </div>
-        </div>
-        <div class="info-right">
-          <div class="iframe-container">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.4621512884037!2d99.10859167496821!3d2.3502465976292823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x302e06ad5f65ce9b%3A0xa09250b49de0c9d0!2sGrand%20Mareda%20Hotel!5e0!3m2!1sen!2sid!4v1699521953075!5m2!1sen!2sid"
-              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade" width="300" height="250" style="border: 0" allowfullscreen=""
-              loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
-      integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
-      crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-  </footer>
+        </footer>
+        <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
