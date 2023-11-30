@@ -10,252 +10,182 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-
     <style>
-    .custom-slider {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .custom-slider img {
-      width: 100%;
-      height: 100vh;
-      object-fit: cover;
-      animation: zoomInImage 8s alternate infinite;
-    }
-
-    .carousel-text {
-      position: absolute;
-      color: #fff;
-      font-size: 24px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 10px;
-      opacity: 0;
-      /* Mulai dengan teks tidak terlihat */
-      animation: fadeInOut 8s infinite;
-    }
-
-    /* Opsi untuk mengatur posisi teks */
-    .position-top-left {
-      top: 50px;
-      left: 50px;
-    }
-
-    .position-top-right {
-      top: 50px;
-      right: 50px;
-    }
-
-    .position-bottom-left {
-      bottom: 50px;
-      left: 200px;
-    }
-
-    .position-bottom-right {
-      bottom: 145px;
-      right: 450px;
-    }
-
-    .position-bottom-right-gambar2 {
-      bottom: 50px;
-      right: 450px;
-    }
-
-    /* Animasi untuk fade in dan out teks */
-    @keyframes fadeInOut {
-
-      0%,
-      100% {
-        opacity: 0;
+       
+      .custom-slider {
+          position: relative;
+          overflow: hidden;
+      }
+      .custom-slider img {
+          width: 100%;
+          height: 100vh; 
+          object-fit: cover; 
+          animation: zoomInImage 8s alternate infinite; 
+      }
+      .carousel-text {
+          position: absolute;
+          color: #fff;
+          font-size: 24px;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+          background-color: rgba(0, 0, 0, 0.5);
+          padding: 10px;
+          opacity: 0; /* Mulai dengan teks tidak terlihat */
+          animation: fadeInOut 8s infinite;
       }
 
-      50% {
-        opacity: 1;
+      /* Opsi untuk mengatur posisi teks */
+      .position-top-left {
+          top: 50px;
+          left: 50px;
       }
-    }
-
-    /* Animasi untuk Zoom In Gambar */
-    @keyframes zoomInImage {
-      0% {
-        transform: scale(1);
+      .position-top-right {
+          top: 50px;
+          right: 50px;
+      }
+      .position-bottom-left {
+          bottom: 50px;
+          left: 200px;
+      }
+      .position-bottom-right {
+          bottom: 145px;
+          right: 450px;
+      }
+      .position-bottom-right-gambar2 {
+          bottom: 50px;
+          right: 450px;
       }
 
-      100% {
-        transform: scale(1.3);
+      /* Animasi untuk fade in dan out teks */
+      @keyframes fadeInOut {
+          0%, 100% {
+              opacity: 0;
+          }
+          50% {
+              opacity: 1;
+          }
       }
-    }
-
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
+      /* Animasi untuk Zoom In Gambar */
+      @keyframes zoomInImage {
+          0% {
+              transform: scale(1);
+          }
+          100% {
+              transform: scale(1.3);
+          }
       }
-    }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
 
-    .b-example-divider {
-      width: 100%;
-      height: 3rem;
-      background-color: rgba(0, 0, 0, .1);
-      border: solid rgba(0, 0, 0, .15);
-      border-width: 1px 0;
-      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-    }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
 
-    .b-example-vr {
-      flex-shrink: 0;
-      width: 1.5rem;
-      height: 100vh;
-    }
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
 
-    .bi {
-      vertical-align: -.125em;
-      fill: currentColor;
-    }
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
 
-    .nav-scroller {
-      position: relative;
-      z-index: 2;
-      height: 2.75rem;
-      overflow-y: hidden;
-    }
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
 
-    .nav-scroller .nav {
-      display: flex;
-      flex-wrap: nowrap;
-      padding-bottom: 1rem;
-      margin-top: -1px;
-      overflow-x: auto;
-      text-align: center;
-      white-space: nowrap;
-      -webkit-overflow-scrolling: touch;
-    }
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
 
-    .btn-bd-primary {
-      --bd-violet-bg: #712cf9;
-      --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
 
-      --bs-btn-font-weight: 600;
-      --bs-btn-color: var(--bs-white);
-      --bs-btn-bg: var(--bd-violet-bg);
-      --bs-btn-border-color: var(--bd-violet-bg);
-      --bs-btn-hover-color: var(--bs-white);
-      --bs-btn-hover-bg: #6528e0;
-      --bs-btn-hover-border-color: #6528e0;
-      --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-      --bs-btn-active-color: var(--bs-btn-hover-color);
-      --bs-btn-active-bg: #5a23c8;
-      --bs-btn-active-border-color: #5a23c8;
-    }
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
 
-    .bd-mode-toggle {
-      z-index: 1500;
-    }
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
 
-    .bd-mode-toggle .dropdown-menu .active .bi {
-      display: block !important;
-    }
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
 
-    .img-thumbnail {
-      margin-left: 3rem;
-      width: 25rem;
-    }
-
-    .img-thumbnail img {
-      width: 25rem;
-      max-height: 100%;
-
-    }
-
-    .Toba {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 96%;
-      margin-bottom: 2rem;
-      margin-left: 3%;
-      margin-right: 3%;
-    }
-
-    .Wel {
-      color: black;
-    }
-
-    .Wel h2 {
-      font-size: 3rem;
-      position: relative;
-      bottom: 3.9rem;
-    }
-
-    .Wel p {
-      font-size: 1.4rem;
-      position: relative;
-      bottom: 3rem;
-    }
-
-    .Lokasi {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 96%;
-      margin-bottom: 2rem;
-      margin-left: 3%;
-      margin-right: 3%;
-    }
-
-    .Maps {
-      color: black;
-      margin-left: 5rem;
-      width: 40rem;
-    }
-
-    .Maps h2 {
-      font-size: 3rem;
-      position: relative;
-      bottom: 3.9rem;
-    }
-
-    .Maps p {
-      font-size: 1.4rem;
-      position: relative;
-      bottom: 3rem;
-    }
-
-    .img-maps {
-      margin-right: 1rem;
-    }
-
-    .featurette-divider {
-      margin-top: auto;
-      margin-bottom: auto;
-    }
-
-    .title-mark h2 {
-      text-align: center;
-    }
-
-    .row {
-      margin-top: 4rem;
-    }
-    footer {
-      background-color: black;
-    }
-    .copyright-inner p {
-      color: #fff;
-      font-size: 1rem;
-      margin-top: 0rem;
-      margin-bottom: 0rem;
-      height: 3rem;
-      text-align: center;
-    }
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+      .img-thumbnail {
+        margin-left: 3rem;
+        width: 25rem;
+      }
+      .img-thumbnail img {
+        width: 25rem;
+        max-height: 100%;
+        
+      }
+      .Toba {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 96%;
+        margin-bottom: 2rem;
+        margin-left: 3%;
+        margin-right: 3%;
+      }
+      .Wel {
+        color: black;
+      }
+      .Wel h2 {
+        font-size: 3rem;
+        position: relative;
+        bottom: 3.9rem;
+      }
+      .Wel p {
+        font-size: 1.4rem;
+        position: relative;
+        bottom: 3rem;
+      }
+      .featurette-divider{
+        margin-top: auto;
+        margin-bottom: auto;
+      }
   </style>
+    
 </head>
   <nav class="navbar navbar-expand-lg bg-body-tertiary z-index-2">
     <div class="container-fluid">
@@ -277,9 +207,6 @@
             <a class="nav-link text-dark" href="#">Kuliner</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-dark" href="#">Event</a>
-          </li>
-           <li class="nav-item">
             <a class="nav-link text-dark" href="#">Tentang Kami</a>
           </li>
         </ul>
@@ -309,13 +236,9 @@
               <div class="carousel-text position-bottom-left"><i class="fas fa-map-marker-alt"></i> Arung Jeram Parhitean</div>
           </div>
           <div class="carousel-item">
-            <img src="images/Bukit-Gibeon.jpg" alt="Slide 4">
+            <img src="images/Bukit-Gibeon.jpg" alt="Slide 3">
             <div class="carousel-text position-bottom-left"><i class="fas fa-map-marker-alt"></i> Bukit Gibeon</div>
-          </div>
-          <div class="carousel-item">
-            <img src="images/Batu-Basiha.jpg" alt="Slide 5">
-            <div class="carousel-text position-bottom-left"><i class="fas fa-map-marker-alt"></i> Batu Basiha</div>
-          </div>
+        </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -327,99 +250,51 @@
         </button>
   </div>
   <hr class="featurette-divider">
-<div class="Toba">
-  <div class="Wel">
-    <h2 class="featurette-heading fw-normal lh-1">Selamat datang di Kabupaten Toba.</h2>
-    <p class="lead">Toba adalah sebuah kabupaten yang berada pada 2º03’-2º40’ LU dan 98º56’-99º40’ BT dan memiliki luas
-      wilayah 2.021,8 km2. Keindahan Danau Toba dan pemandangan sekelilingnya memang menjadi daya pikat utama yang
-      dimiliki oleh Toba. Danau dengan luas 1.145 km persegi ini menyajikan pemandangan indah yang menarik perhatian
-      kita untuk mengunjungi dan mengeksplorasinya lebih jauh. Melihat danau Toba seakan-akan kita sedang melihat sebuah
-      lautan. Begitu luasnya danau ini menjadikannya sebagai danau terbesar di Indonesia bahkan di Asia Tenggara. Selain
-      itu deretan pegunungan Bukit Barisan yang hijau juga menarik untuk di telusuri. Datang dan jelajahi lebih jauh
-      pesona keindahan Danau Toba. Datanglah ke Toba.</p>
-  </div>
-  <div class="img-thumbnail">
-    <img src="images/Balerong-Balige.jpg" class="gambartoba" alt="...">
-  </div>
-</div>
-
-
-
-<hr class="featurette-divider">
-
-<div class="Lokasi">
-  <div class="img-maps">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d510254.14241448767!2d99.24837745!3d2.3855824500000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3031e4f3fdb559c5%3A0x3039d80b220d090!2sToba%2C%20Sumatera%20Utara!5e0!3m2!1sid!2sid!4v1699774907123!5m2!1sid!2sid"
-      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
-  <div class="Maps">
-    <h2 class="featurette-heading fw-normal lh-1">Lokasi Kabupaten Toba.</h2>
-    <p class="lead">Kabupaten Toba terletak di bagian tengah Provinsi Sumatera Utara, Indonesia. Ibukota kabupaten ini
-      adalah Balige. Kabupaten ini memiliki keindahan alam yang memukau dan pastinya membuat para wisatawan tertarik
-      untuk mengunjunginya.</p>
-  </div>
-</div>
-
-<hr class="featurette-divider">
-
-<div class="container marketing">
-  <div class="title-mark">
-    <h2 class="featurette-heading fw-normal lh-1">Top 5 Destinasi Wisata</h2>
-  </div>
-  <!-- Three columns of text below the carousel -->
-  <div class="row">
-    <div class="col-lg-4">
-      <img src="images/Pasir-Putih-Parparean.jpg" width="140" height="140" class="bd-placeholder-img rounded-circle">
-      <h2 class="fw-normal">Pantai Pasir Putih Parparean</h2>
-      <p>Paduan panorama air laut dan langit yang membiru dan berawan menjadi keistimewaan tersendiri, membuat para
-        wisatawan semakin betah berlama-lama berada di pantai ini.</p>
-      <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-    </div><!-- /.col-lg-4 -->
-    <div class="col-lg-4">
-      <img src="images/Bukit-Gibeon.jpg" width="140" height="140" class="bd-placeholder-img rounded-circle">
-      <h2 class="fw-normal">Bukit Gibeon</h2>
-      <p>Bukit Gibeon adalah salah satu tujuan wisata keluarga yang terletak di Kabupaten Toba Samosir dan merupakan
-        keharusan bagi Anda untuk mengunjungi karena sifatnya keindahannya</p>
-      <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-    </div><!-- /.col-lg-4 -->
-    <div class="col-lg-4">
-      <img src="images/Pakkodian.jpg" width="140" height="140" class="bd-placeholder-img rounded-circle">
-      <h2 class="fw-normal">Pantai Pakkodian</h2>
-      <p>Pantai Pakkodian menjadi salah satu pantai yang cukup unik karena berada di tepian Danau Toba.</p>
-      <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-    </div><!-- /.col-lg-4 -->
-    <div class="col-lg-4">
-      <img src="images/Taman-Eden.jpg" width="140" height="140" class="bd-placeholder-img rounded-circle">
-      <h2 class="fw-normal">Taman Eden 100</h2>
-      <p>Taman Eden 100 memiliki pesona alam yang indah seperti, air terjun, Goa Kelelawar, Bukit Manja (Lake Toba
-        view), Kebun Anggrek Toba, dan alam bebas. Area ini juga bisa dimanfaatkan untuk trekking dan camping ground.
-      </p>
-      <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-    </div>
-    <div class="col-lg-4">
-      <img src="images/Arung-Jeram-Parhitean.jpg" width="140" height="140" class="bd-placeholder-img rounded-circle">
-      <h2 class="fw-normal">Arung Jeram Parhitean</h2>
-      <p>Di Kawasan Danau Toba, Tempat Wisata ini adalah salah satu wisata arung jeram terfavorit. Berada di Desa
-        Parhitean Kecamatan Pintu Pohan Meranti, Kabupaten Toba yang berbatasan dengan Asahan. </p>
-      <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-    </div>
-  </div>
-
-  <hr class="featurette-divider">
-
-</div>
-<footer class="footer-wrap is-light-text is-bg">
-  <div class="footer-copyright footer-section">
-    <div class="rbc-container">
-      <div class="copyright-inner rb-p20-gutter">
-        <p class="featurette-heading fw-normal lh-1">Copyright © 2023 Destinasi Wisata Kabupaten Toba</p>
+    <div class="Toba">
+      <div class="Wel">
+        <h2 class="featurette-heading fw-normal lh-1">Selamat datang di Kabupaten Toba.</h2>
+        <p class="lead">Toba adalah sebuah kabupaten yang berada pada 2º03’-2º40’ LU dan 98º56’-99º40’ BT dan memiliki luas wilayah 2.021,8 km2. Keindahan Danau Toba dan pemandangan sekelilingnya memang menjadi daya pikat utama yang dimiliki oleh Toba. Danau dengan luas 1.145 km persegi ini menyajikan pemandangan indah yang menarik perhatian kita untuk mengunjungi dan mengeksplorasinya lebih jauh. Melihat danau Toba seakan-akan kita sedang melihat sebuah lautan. Begitu luasnya danau ini menjadikannya sebagai danau terbesar di Indonesia bahkan di Asia Tenggara. Selain itu deretan pegunungan Bukit Barisan yang hijau juga menarik untuk di telusuri. Datang dan jelajahi lebih jauh pesona keindahan Danau Toba. Datanglah ke Toba.</p>
+      </div>
+      <div class="img-thumbnail">
+        <img src="images/Kabupaten-Toba.jpg" class="gambartoba" alt="...">
       </div>
     </div>
-  </div>
-</footer>
+      
+      
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-body-secondary">See for yourself.</span></h2>
+        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span class="text-body-secondary">Checkmate.</span></h2>
+        <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
  
 </html>
+ 
+
