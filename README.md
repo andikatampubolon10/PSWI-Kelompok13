@@ -1,1 +1,0 @@
-# PSWI-Kelompok13
