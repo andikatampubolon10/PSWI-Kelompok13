@@ -1,0 +1,780 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+  <script src="../assets/js/color-modes.js"></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.118.2">
+  <title>Kuliner</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+
+  <link rel="stylesheet" href="css/Kuliner.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+
+  <style>
+    body {
+
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .rating {
+      unicode-bidi: bidi-override;
+      direction: rtl;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .rating input {
+      display: none;
+    }
+
+    .rating label {
+      display: inline-block;
+      padding: 0 1px;
+      font-size: 20px;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .rating label:before {
+      content: '\2605';
+      margin: 0 5px;
+      color: #ddd;
+    }
+
+    .rating input:checked~label:before {
+      color: #f90;
+    }
+
+    .rating-value {
+      font-size: 18px;
+      margin-right: 10px;
+    }
+
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      width: 100%;
+      height: 3rem;
+
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .btn-bd-primary {
+      --bd-violet-bg: #712cf9;
+      --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+      --bs-btn-font-weight: 600;
+      --bs-btn-color: var(--bs-white);
+      --bs-btn-bg: var(--bd-violet-bg);
+      --bs-btn-border-color: var(--bd-violet-bg);
+      --bs-btn-hover-color: var(--bs-white);
+      --bs-btn-hover-bg: #6528e0;
+      --bs-btn-hover-border-color: #6528e0;
+      --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+      --bs-btn-active-color: var(--bs-btn-hover-color);
+      --bs-btn-active-bg: #5a23c8;
+      --bs-btn-active-border-color: #5a23c8;
+    }
+
+    .bd-mode-toggle {
+      z-index: 1500;
+    }
+
+    .bd-mode-toggle .dropdown-menu .active .bi {
+      display: block !important;
+    }
+
+    img {
+      width: 26.2rem;
+      height: 14rem;
+    }
+
+    .checked {
+      color: gold;
+    }
+
+    .rate {
+      margin-left: 1rem;
+      left: 4rem;
+      top: 0.1rem;
+      position: absolute;
+    }
+
+    .btn-group h4 {
+      position: absolute;
+      left: 20rem
+    }
+
+    h6 {
+      position: absolute;
+      top: 0rem;
+      left: 5.5rem;
+    }
+
+    .fixed-image {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border: 1px solid #ccc;
+    }
+
+    .card:hover {
+      transform: scale(1.1);
+      transition: transform 0.5s ease;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      background-color: #ddd;
+      color: #333;
+    }
+
+    .container {
+      background: linear-gradient(to right, antiquewhite, antiquewhite);
+    }
+
+    footer p {
+      color: aliceblue;
+    }
+
+    footer {
+      background-color: #008148;
+      position: relative;
+      top: 4.5rem;
+    }
+
+    .dropdown-menu li a {
+      color: black !important;
+
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary header">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse nav justify-content-center" id="navbarNav">
+          <nav class="deep" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="Beranda.html">Beranda</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Kuliner</li>
+            </ol>
+          </nav>
+          <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link active text-dark" aria-current="page" href="Beranda.html">Beranda</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Destinasi Wisata
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Wisata/Bukit_Singgolom.html">Bukit Singgolom</a></li>
+                <li><a class="dropdown-item" href="Wisata/Destinasi Wisata Bukit_Gibeon.html">Bukit Gibeon</a></li>
+                <li><a class="dropdown-item" href="Wisata/Destinasi Wisata Geopark Kaldera Toba.html">Geopark Kaldera
+                    Toba</a></li>
+                <li><a class="dropdown-item" href="Wisata/Destinasi Wisata Pantai Pakkodian.html">Pantai Pakkodian</a>
+                </li>
+                <li><a class="dropdown-item" href="Wisata/Destinasi Wisata Sunset Beach.html">Sunset Beach</a></li>
+                <li><a class="dropdown-item" href="Wisata/Destinasi Wisata Taman Eden 100.html">Taman Eden 100</a></li>
+                <li><a class="dropdown-item" href="Wisata/Pantai_Pardinggaran.html">Pantai Pardinggaran</a></li>
+                <li><a class="dropdown-item" href="Wisata/Pasput.html">Pantai Pasir Putih Parparean</a></li>
+                <li><a class="dropdown-item" href="Wisata/Wisata Situmurun.html">Air Terjun Situmurun</a></li>
+                <li><a class="dropdown-item" href="Wisata/Destinasi Wisata Batu Gantung.html">Batu Gantung</a></li>
+                <li><a class="dropdown-item" href="Wisata/Destinasi Wisata Arung Jeram Parhitean.html">Arung Jeram
+                    Parhitean</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Akomodasi
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Akomodasi/Singgolom.html">Bukit Singgolom</a></li>
+                <li><a class="dropdown-item" href="Akomodasi/Gibeon.html">Bukit Gibeon</a></li>
+                <li><a class="dropdown-item" href="Akomodasi/Kaldera.html">Geopark Kaldera Toba</a></li>
+                <li><a class="dropdown-item" href="Akomodasi/Pakkodian.html">Pantai Pakkodian</a></li>
+                <li><a class="dropdown-item" href="Akomodasi/Sunset.html">Sunset Beach</a></li>
+                <li><a class="dropdown-item" href="Akomodasi/Taman Eden.html">Taman Eden 100</a></li>
+                <li><a class="dropdown-item" href="Akomodasi/Pasput.html">Pantai Pasir Putih Parparean</a></li>
+                <li><a class="dropdown-item" href="Akomodasi/Situmurun.html">Air Terjun Situmurun</a></li>
+                <li><a class="dropdown-item" href="Akomodasi/Batu Gantung.html">Batu Gantung</a></li>
+                <li><a class="dropdown-item" href="Akomodasi/Arum Jeram Parhitean.html">Arung Jeram Parhitean</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="Kuliner.html">Kuliner</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="Event.html">Event</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="Tentang Kami.html">Tentang Kami</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="album py-5 bg-body-tertiary">
+      <div class="container">
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+
+          <button ype="button" data-bs-toggle="modal" data-bs-target="#miegomak"
+            style="background-color: transparent;border: none;">
+            <div class="col" id="mie-gomak">
+              <div class="card shadow-sm">
+                <img class="zoomable-image" src="Kuliner/mie.webp" alt="Mie Gomak">
+                <div class="card-body">
+                  <p class="card-text text-start">Mie Gomak</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bxs-star-half' style='color: gold;'></i>
+                      <h6>4.5</h6>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </button>
+
+
+
+          <div class="modal fade" id="miegomak" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Mie Gomak</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="zoomable-image" src="Kuliner/mie.webp" alt="Mie Gomak">
+                  <p>
+                    Mie Gomak merupakan salah satu dari sekian banyak kuliner khas tepian Danau Toba. Keistimewaannya
+                    tersua rasa pedas ketir dari percampuran cabai, bawang dan andaliman. Rasa ketir ini datang dari
+                    bumbu merica khas Toba bernama andaliman. Tumbuhan ini hanya bisa ditemukan di wilayah Sumatera
+                    Utara.
+                  </p>
+                  Disebut mie gomak karena dahulu saat mau disajikan ke piring/cawan, mienya digomak (dijumput dengan
+                  tangan). Sekarang, pencampuran mi gomak dengan bumbu tidak lagi digomak melainkan memakai garpu atau
+                  sendok. Namun beberapa pedagang masih saja menggodak (menjumput) mi dengan tangan dilapisi kantong
+                  plastik atau kresek. Higienitas makanan tetap terjaga.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <button ype="button" data-bs-toggle="modal" data-bs-target="#lappetmodal"
+            style="background-color: transparent;border: none;">
+            <div class="col" id="lappet">
+              <div class="card shadow-sm">
+                <img src="Kuliner/lappet.jpg">
+                <div class="card-body">
+                  <p class="card-text text-start">Lappet</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bxs-star-half' style='color: gold;'></i>
+                      <h6>4.5</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </button>
+
+          <div class="modal fade" id="lappetmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Lappet</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="zoomable-image" src="Kuliner/lappet.jpg" alt="Lappet">
+                  <p>
+                    Lappet merupakan makanan khas Toba yang hampir mirip dengan kue putu Jawa. Rasanya yang manis dan
+                    gurih menjadi ciri khas kuliner unik satu ini.
+                  <p>
+                    Bahan untuk membuat kue lappet ini sangat sederhana, hanya tepung beras dan parutan kelapa sebagai
+                    bahan utamanya.
+                    Untuk isiannya cukup menggunakan gula aren yang dicampur dengan kelapa parut.
+                  </p>
+                  Proses pembuatan Kue Lappet melibatkan keterampilan khusus dalam memadatkan ketan agar menghasilkan
+                  tekstur yang kenyal dan lembut. Setelah itu, kue ini dipanggang atau dikukus hingga matang. Kue Lapet
+                  biasanya disajikan dalam jumlah banyak dan diletakkan di atas daun pisang sehingga memberikan aroma
+                  khas dan tampilan yang menarik.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <button ype="button" data-bs-toggle="modal" data-bs-target="#manukmodal"
+            style="background-color: transparent;border: none;">
+            <div class="col" id="manuk-napinadar">
+              <div class="card shadow-sm">
+                <img src="Kuliner/manuk.webp">
+                <div class="card-body">
+                  <p class="card-text  text-start">Manuk Napinadar</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bxs-star-half' style='color: gold;'></i>
+                      <i class='bx bx-star' style='color: gold;'></i>
+                      <h6>3.5</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </button>
+
+          <div class="modal fade" id="manukmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Manuk Napinadar</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="zoomable-image" src="Kuliner/manuk.webp" alt="Lappet">
+                  <p>
+                    Manuk Napinadar atau Ayam Napinadar adalah masakan khas Batak yang biasanya dihidangkan pada pesta
+                    adat tertentu. Untuk mengerjakan resep yang satu ini agak sedikit rumit, butuh waktu dan kesabaran.
+                    Pastinya inti dari masakan ini adalah di saus darah ayam itu sendiri.
+                  </p>
+                  Dalam pengolahan Ayam Napinadar ini, ayamnya harus dipanggang terlebih dahulu, setelah itu lalu
+                  disiram dengan saus spesial yakni darah ayam (manuk) itu sendiri, dan dicampur dengan andaliman,
+                  bawang putih bubuk (yang sudah digiling sampai halus) lalu dimasak. Sama seperti kita menuangkan saus
+                  ke atas ayam yang sudah dipanggang.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button ype="button" data-bs-toggle="modal" data-bs-target="#itakmodal"
+            style="background-color: transparent;border: none;">
+            <div class="col" id="itak-gurgur">
+              <div class="card shadow-sm">
+                <img src="Kuliner/itak.jfif">
+                <div class="card-body">
+                  <p class="card-text text-start">Itak Gurgur</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bxs-star-half' style='color: gold;'></i>
+                      <i class='bx bx-star' style='color: gold;'></i>
+                      <h6>3.5</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </button>
+
+          <div class="modal fade" id="itakmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Itak Gurgur</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="zoomable-image" src="Kuliner/itak.jfif" alt="Lappet">
+                  <p>
+                    Itak Gurgur adalah salah satu makanan khas yang berasal dari Kabupaten Toba. Itak Gurgur biasanya
+                    disebut sebagaai makanan tradisional yang disajikan ketika memanjatkan doa saat momen-momen
+                    tertentu.
+                  <p>
+                    Makanan ini memiliki rasa original menggunakan tepung beras dan gula aren. Itak gurgur dibuat dengan
+                    sangat sederhana tanpa dimasak. Bahan utama makanan ini adalah tepung beras. Sebelum ada alat
+                    penggilingan, beras hanya ditumbuk sehalus mungkin.
+                  </p>
+                  Bahkan hingga kini sebagian masyarakat masih ada yang mempertahan pengolahan seperti ini karena
+                  dianggap rasa Itak Gurgur justru terasa lebih enak.Cara membuatnya adalah beras terlebih dahulu
+                  direndam. Kemudian dicampur dengan garam, gula, dan kelapa parut. Semua bahan tersebut diaduk merata.
+                  Setelah itu baru dikepal-kepal hingga padat kemudian Itak Gurgur sudah dapat dinikmati.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button ype="button" data-bs-toggle="modal" data-bs-target="#natinomburmodal"
+            style="background-color: transparent;border: none;">
+            <div class="col" id="natinombur">
+              <div class="card shadow-sm">
+                <img src="Kuliner/natinombur.jfif">
+                <div class="card-body">
+                  <p class="card-text text-start">Natinombur</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bx-star' style='color: gold;'></i>
+                      <h6>4.0</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </button>
+
+          <div class="modal fade" id="natinomburmodal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Natinombur</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="zoomable-image" src="Kuliner/natinombur.jfif" alt="Lappet">
+                  <p>
+                    Natinombur salah satu kuliner khas Kabpuaten Toba, natinombur adalah ikan bakar yang disajikan
+                    dengan sambal atau ikan panggang yang dilumuri sambal.
+                  </p>
+                  Natinombur terbuat dari ikan bakar yang disajikan dengan kuah kental penuh bumbu.
+                  Hidangan ini dimulai dengan cara membakar atau menggoreng ikan mas atau mujair terlebih dahulu.
+                  Rempah yang digunakan untuk bumbu ikan adalah andaliman, jahe, bawang merah, kemiri, dan jeruk
+                  nipis.Andaliman sendiri adalah bahan yang dapat menambah cita rasa yang lebih pedas dan gurih.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <button ype="button" data-bs-toggle="modal" data-bs-target="#naniuramodal"
+            style="background-color: transparent;border: none;">
+            <div class="col" id="naniura">
+              <div class="card shadow-sm">
+                <img src="Kuliner/naniura.jpg">
+                <div class="card-body">
+                  <p class="card-text text-start">Naniura</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bx-star' style='color: gold;'></i>
+                      <h6>4.0</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </button>
+
+          <div class="modal fade" id="naniuramodal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Naniura</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="zoomable-image" src="Kuliner/naniura.jpg" alt="Lappet">
+                  <p>
+                    Naniura adalah salah satu kuliner khas Kabupaten Toba. Ikan mentah segar merupakan salah satu
+                    komponen tradisional dari naniura. Daging ikan segar dilumuri bumbu dan unte jungga (asam Batak)
+                    ditambah Andaliman, jeruk, cabai merah, bawang merah, bawang putih, kemiri, ketumbar, kacang tanah,
+                    kunyit, bunga rias (batang kecombrang) yang lebih dulu dilumat halus.
+                  </p>
+                  naniura mengandalkan bahan-bahan alam. Dan semua bahan itu terjadi di sekitar kita. Kacang tanah,
+                  kecombrang, unte jungga, cabai, tomat, sayur, kunyit dan andaliman adalah tanaman-tanaman yang mudah
+                  ditemukan di daerah Kabupaten Toba. Tumbuhan-tumbuhan rempah-rempah ini kaya manfaat dan khasiat untuk
+                  kesehatan tubuh.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <button ype="button" data-bs-toggle="modal" data-bs-target="#arsikmodal"
+            style="background-color: transparent;border: none;">
+            <div class="col" id="arsik">
+              <div class="card shadow-sm">
+                <img src="Kuliner/arsik.jfif">
+                <div class="card-body">
+                  <p class="card-text text-start">Arsik</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bx-star' style='color: gold;'></i>
+                      <h6>4.0</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </button>
+
+          <div class="modal fade" id="arsikmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Arsik</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="zoomable-image" src="Kuliner/arsik.jfif" alt="Lappet">
+                  <p>
+                    Arsik adalah makan khas Kabupaten Toba Sumatera Utara. Makanan yang berbahan dasar ikan mas yang
+                    dibumbui kuning dan rempah-rempah khas asalnya seperti Andaliman, kincung, bawang batak.penamaan
+                    makanan batak sebagian besar didasarkan pada proses memasak. Dengan kata lain, Dekke Na Niarsik,
+                    ikan yang dimasak terus-menerus sampai kuahnya kering, bumbunya menyerap ke ikan mas tersebut.
+                  </p>
+                  Bumbu arsik terbuat dari beberapa jenis rempah-rempah yang dipadukan sehingga menghasilkan cita rasa
+                  yang kompleks dan khas. Rasa yang dihasilkan merupakan perpaduan rasa segar dan gurih serta aroma yang
+                  nikmat, sedangkan bumbu khas Masakan Arsik adalah Andaliman.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button ype="button" data-bs-toggle="modal" data-bs-target="#sasagunmodal"
+            style="background-color: transparent;border: none;">
+            <div class="col" id="sasagun">
+              <div class="card shadow-sm">
+                <img src="Kuliner/sasagun.webp">
+                <div class="card-body">
+                  <p class="card-text text-start">Sasagun</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bx-star' style='color: gold;'></i>
+                      <h6>4.0</h6>
+                      </script>
+                      </script>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </button>
+
+          <div class="modal fade" id="sasagunmodal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Sasagun</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="zoomable-image" src="Kuliner/sasagun.webp" alt="Lappet">
+                  <p>
+                    Sasagun adalah makanan ringan tradisional khas Kabupaten Toba. Makanan ini dibuat dari tepung beras
+                    yang digongseng dengan kelapa dan dicampur dengan gula merah/aren. Soal rasa bisa dicampur dengan
+                    nenas atau durian, kacang.
+                  </p>
+                  Sasagun terbuat dari tepung beras yang dicampur dengan kelapa parut lalu digongseng sedemikian rupa
+                  hingga tercampur matang. JIka wangi aroma khas sudah tercium dan tepung berubah warna, maka snack unik
+                  ala Batak ini sudah matang.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <button ype="button" data-bs-toggle="modal" data-bs-target="#tipamodal"
+            style="background-color: transparent;border: none;">
+            <div class="col" id="tipa-tipa">
+              <div class="card shadow-sm">
+                <img src="Kuliner/tipa.jpg">
+                <div class="card-body">
+                  <p class="card-text text-start">Tipa-Tipa</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bxs-star' style='color: gold;'></i>
+                      <i class='bx bx-star' style='color: gold;'></i>
+                      <h6>4.0</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="tipamodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Tipa-Tipa</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img class="zoomable-image" src="Kuliner/tipa.jpg" alt="Lappet">
+            <p>
+              Oleh-oleh khas Kabupaten Toba, Sumatera Utara, yakni tipa-tipa menjadi pilihan para wisatawan maupun
+              perantau. Tipa-tipa yang terbuat dari padi muda dan ditumbuk gepeng, laris manis terjual dan cukup
+              diminati wisatawan lokal maupun luar daerah Toba.
+            </p>
+            Camilan ini terbuat dari padi yang masih muda. Sesaat setelah dipanen, padi tersebut direndam dengan air
+            selama kurang lebih dua malam. Setelah proses perendaman tadi, padi ditiriskan lalu digongseng hingga
+            matang. Setelah itu, dalam keadaan masih panas padi tersebut dihancurkan dengan cara ditumbuk.
+            Camilan ini dinamakan tipa-tipa karena artinya adalah ditumbuk berulang kali. Ini menggambarkan bagaimana
+            proses pembuatannya.Tipa-tipa biasanya dimakan bersama campuran kelapa parut dengan sedikit gula atau garam
+            yang jumlah banyaknya disesuaikan dengan selera masing-masing.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-3 my-4">
+    <p class="text-center">Destinasi Wisata Kabupaten Toba</p>
+
+    <p class="text-center">&copy; 2023</p>
+  </footer>
+  <script src="js/bootstrap.bundle.min.js">
+
+  </script>
+
+</body>
+
+</html>

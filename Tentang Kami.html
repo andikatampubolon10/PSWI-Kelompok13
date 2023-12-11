@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.118.2">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .header {
+            background-color: #008148 !important;
+        }
+
+        .header a {
+            color: #fff !important;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            background-color: #ddd;
+            color: #008148 !important;
+            border-radius: 3%;
+        }
+
+        body {
+            background-color: antiquewhite;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            width: 100%;
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .btn-bd-primary {
+            --bd-violet-bg: #712cf9;
+            --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+            --bs-btn-font-weight: 600;
+            --bs-btn-color: var(--bs-white);
+            --bs-btn-bg: var(--bd-violet-bg);
+            --bs-btn-border-color: var(--bd-violet-bg);
+            --bs-btn-hover-color: var(--bs-white);
+            --bs-btn-hover-bg: #6528e0;
+            --bs-btn-hover-border-color: #6528e0;
+            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+            --bs-btn-active-color: var(--bs-btn-hover-color);
+            --bs-btn-active-bg: #5a23c8;
+            --bs-btn-active-border-color: #5a23c8;
+        }
+
+        .bd-mode-toggle {
+            z-index: 1500;
+        }
+
+        .bd-mode-toggle .dropdown-menu .active .bi {
+            display: block !important;
+        }
+
+        i {
+            font-size: 2rem;
+            float: left;
+            margin-left: 3rem;
+        }
+
+        p {
+            float: left;
+            margin-left: 0rem;
+            margin-top: 0rem;
+            display: flex;
+            flex-direction: column;
+            font-size: 1.3rem;
+        }
+
+        .Info1 {
+            display: flex;
+            align-items: center;
+        }
+
+        .Info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .Info2 {
+            margin-left: 1%;
+            margin-top: 1%;
+        }
+
+        .sosmed {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .sosmed i {
+            color: black;
+        }
+
+        a {
+            color: black;
+            font-size: 1rem;
+            text-decoration: none;
+            position: relative;
+            bottom: 0.5rem;
+        }
+
+        .Info2 :hover {
+            color: #008148;
+        }
+
+        footer p {
+            color: aliceblue;
+        }
+
+        footer {
+            background-color: #008148;
+            position: relative;
+            top: 4.5rem;
+        }
+
+        .deep {
+            position: absolute;
+            left: 0%;
+            display: flex;
+            justify-content: center;
+            top: 3.7rem;
+            color: #000;
+            background-color: rgba(255, 255, 255, 0) !important;
+            margin-left: 2rem;
+        }
+
+        .deep a {
+            font-size: 1.2rem;
+            color: #000 !important;
+        }
+
+        .dropdown-menu li a {
+            color: black !important;
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="css/about.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary header">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse nav justify-content-center" id="navbarNav">
+                <nav class="deep" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="Beranda.html">Beranda</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Tentang Kami</li>
+                    </ol>
+                </nav>
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link active text-dark" aria-current="page" href="Beranda.html">Beranda</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Destinasi Wisata
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Wisata/Bukit_Singgolom.html">Bukit Singgolom</a></li>
+                            <li><a class="dropdown-item" href="Wisata/Destinasi Wisata Bukit_Gibeon.html">Bukit
+                                    Gibeon</a></li>
+                            <li><a class="dropdown-item"
+                                    href="Wisata/Destinasi Wisata Geopark Kaldera Toba.html">Geopark Kaldera
+                                    Toba</a></li>
+                            <li><a class="dropdown-item" href="Wisata/Destinasi Wisata Pantai Pakkodian.html">Pantai
+                                    Pakkodian</a>
+                            </li>
+                            <li><a class="dropdown-item" href="Wisata/Destinasi Wisata Sunset Beach.html">Sunset
+                                    Beach</a></li>
+                            <li><a class="dropdown-item" href="Wisata/Destinasi Wisata Taman Eden 100.html">Taman Eden
+                                    100</a></li>
+                            <li><a class="dropdown-item" href="Wisata/Pantai_Pardinggaran.html">Pantai Pardinggaran</a>
+                            </li>
+                            <li><a class="dropdown-item" href="Wisata/Pasput.html">Pantai Pasir Putih Parparean</a></li>
+                            <li><a class="dropdown-item" href="Wisata/Wisata Situmurun.html">Air Terjun Situmurun</a>
+                            </li>
+                            <li><a class="dropdown-item" href="Wisata/Destinasi Wisata Batu Gantung.html">Batu
+                                    Gantung</a></li>
+                            <li><a class="dropdown-item" href="Wisata/Destinasi Wisata Arung Jeram Parhitean.html">Arung
+                                    Jeram
+                                    Parhitean</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Akomodasi
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Akomodasi/Singgolom.html">Bukit Singgolom</a></li>
+                            <li><a class="dropdown-item" href="Akomodasi/Gibeon.html">Bukit Gibeon</a></li>
+                            <li><a class="dropdown-item" href="Akomodasi/Kaldera.html">Geopark Kaldera Toba</a></li>
+                            <li><a class="dropdown-item" href="Akomodasi/Pakkodian.html">Pantai Pakkodian</a></li>
+                            <li><a class="dropdown-item" href="Akomodasi/Sunset.html">Sunset Beach</a></li>
+                            <li><a class="dropdown-item" href="Akomodasi/Taman Eden.html">Taman Eden 100</a></li>
+                            <li><a class="dropdown-item" href="Akomodasi/Pasput.html">Pantai Pasir Putih Parparean</a>
+                            </li>
+                            <li><a class="dropdown-item" href="Akomodasi/Situmurun.html">Air Terjun Situmurun</a></li>
+                            <li><a class="dropdown-item" href="Akomodasi/Batu Gantung.html">Batu Gantung</a></li>
+                            <li><a class="dropdown-item" href="Akomodasi/Arum Jeram Parhitean.html">Arung Jeram
+                                    Parhitean</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="Kuliner.html">Kuliner</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="Event.html">Event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="Tentang Kami.html">Tentang Kami</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="p-5 text-center bg-body-tertiary rounded-3">
+            <img src="images/logo-toba.png">
+            <h1 class="text-body-emphasis">Dinas Kebudayaan & Pariwisata Kabupaten Toba</h1>
+            <div class="Info">
+                <div class="Info1">
+                    <i class='bx bxs-map'></i>
+                    <div class="Info2">
+                        <p>Jl. Dr. T.D. Pardede No.02, Lumban Dolok Haume Bange Kec. Balige, Toba, Sumatera Utara</p>
+                    </div>
+
+                </div>
+                <div class="Info1">
+                    <i class='bx bxs-envelope'></i>
+                    <div class="Info2">
+                        <p>budpartobasa@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="Info1">
+                    <i class='bx bxl-chrome'></i>
+                    <div class="Info2">
+                        <a href="wisata.tobakab.go.id">wisata.tobakab.go.id</a>
+                    </div>
+                </div>
+                <div class="sosmed">
+                    <div class="Info1">
+
+                        <div class="Info2">
+                            <a href="https://www.facebook.com/dispartoba?mibextid=9R9pXO"><i
+                                    class='bx bxl-facebook-circle'></i></a>
+                        </div>
+                    </div>
+
+                    <div class="Info1">
+
+                        <div class="Info2">
+                            <a href="https://x.com/disbudpar_sumut?t=iZWTgeWSXmdQVftFI5i1QA&s=09"><i
+                                    class='bx bxl-twitter'></i></a>
+                        </div>
+                    </div>
+
+                    <div class="Info1">
+
+                        <div class="Info2">
+                            <a href="https://instagram.com/disbudpar_toba?igshid=NzZlODBkYWE4Ng=="><i
+                                    class='bx bxl-instagram'></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
