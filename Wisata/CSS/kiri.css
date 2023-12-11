@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+nav a {
+  align-items: center;
+}
+
+nav.navbar.header {
+  background-color: #008148 !important;
+  padding: 10px 10px;
+}
+
+nav.navbar.header a {
+  color: #fff !important;
+}
+
+.container-fluid {
+  padding: 20px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+nav.navbar.header a:hover,
+nav.navbar.header a:focus {
+  background-color: #ddd;
+  color: #008148 !important;
+  border-radius: 3%;
+}
+
+.carousel-inner {
+  border-radius: 10px;
+}
+
+.carousel-control-next-icon {
+  background-color: #007bff;
+}
+
+.container {
+  color: rgba(255, 255, 255, 0.7);
+  padding: 2px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.kiri {
+  text-align: left;
+  font-weight: 300;
+  color: #000;
+  padding: 10px;
+  margin-left: 40px;
+  text-align: justify;
+  width: 30rem;
+}
+
+.name1 {
+  color: yellow;
+}
+
+.name {
+  color: black;
+}
+
+.iframe-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 50%;
+  margin-left: 10rem;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #0056b3;
+}
+
+section {
+  color: #000;
+}
+
+.dropdown-menu li a {
+  color: black !important;
+}
+.deep {
+  position: absolute;
+  left: 0%;
+  display: flex;
+  justify-content: center;
+  top: 3.7rem;
+  color: #000;
+  background-color: rgba(255, 255, 255, 0) !important;
+  margin-left: 2rem;
+}
+nav.deep .breadcrumb {
+ 
+  padding: 10px;
+  border-radius: 5px;
+}
+
+nav.deep .breadcrumb-item a {
+  background-color: rgba(0, 129, 72, 0.5) !important;
+  color: #fff !important;
+  text-decoration: none;
+}
+
+nav.deep .breadcrumb-item.active {
+  color: #fff !important;
+}
+
+nav.deep .breadcrumb-item a:hover {
+  background-color: #008148 !important;
+  color: #fff!important;
+}
+
+
+#contact {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.container2 {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.kanan {
+  margin-left: 7rem;
+}
+
+.atas {
+  margin-left: 4rem;
+}
+
+.kiri {
+  margin-left: 120px;
+}

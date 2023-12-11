@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+  <script src="../assets/js/color-modes.js"></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.118.2">
+  <title>Akomodasi</title>
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="akomodasi.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .col {
+      display: flex;
+
+    }
+
+    .navbar .dropdown-menu li a {
+      color: black !important;
+    }
+
+    .gambar {
+      margin-left: 4rem;
+      position: relative;
+
+    }
+
+    .pict {
+      margin-left: 4rem;
+      position: relative;
+    }
+
+    .end {
+      margin-left: 40rem;
+    }
+
+    .container {
+      background-color: antiquewhite;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary header">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse nav justify-content-center" id="navbarNav">
+        <nav class="deep" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../Beranda.html">Beranda</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Batu Gantung</li>
+          </ol>
+        </nav>
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active text-dark" aria-current="page" href="../Beranda.html">Beranda</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Destinasi Wisata
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../Wisata/Bukit_Singgolom.html">Bukit Singgolom</a></li>
+              <li><a class="dropdown-item" href="../Wisata/Destinasi Wisata Bukit_Gibeon.html">Bukit Gibeon</a></li>
+              <li><a class="dropdown-item" href="../Wisata/Destinasi Wisata Geopark Kaldera Toba.html">Geopark Kaldera
+                  Toba</a></li>
+              <li><a class="dropdown-item" href="../Wisata/Destinasi Wisata Pantai Pakkodian.html">Pantai Pakkodian</a>
+              </li>
+              <li><a class="dropdown-item" href="../Wisata/Destinasi Wisata Sunset Beach.html">Sunset Beach</a></li>
+              <li><a class="dropdown-item" href="../Wisata/Destinasi Wisata Taman Eden 100.html">Taman Eden 100</a></li>
+              <li><a class="dropdown-item" href="../Wisata/Pantai_Pardinggaran.html">Pantai Pardinggaran</a></li>
+              <li><a class="dropdown-item" href="../Wisata/Pasput.html">Pantai Pasir Putih Parparean</a></li>
+              <li><a class="dropdown-item" href="../Wisata/Wisata Situmurun.html">Air Terjun Situmurun</a></li>
+              <li><a class="dropdown-item" href="../Wisata/Destinasi Wisata Batu Gantung.html">Batu Gantung</a></li>
+              <li><a class="dropdown-item" href="../Wisata/Destinasi Wisata Arung Jeram Parhitean.html">Arung Jeram
+                  Parhitean</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Akomodasi
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="Singgolom.html">Bukit Singgolom</a></li>
+              <li><a class="dropdown-item" href="Gibeon.html">Bukit Gibeon</a></li>
+              <li><a class="dropdown-item" href="Kaldera.html">Geopark Kaldera Toba</a></li>
+              <li><a class="dropdown-item" href="Pakkodian.html">Pantai Pakkodian</a></li>
+              <li><a class="dropdown-item" href="Sunset.html">Sunset Beach</a></li>
+              <li><a class="dropdown-item" href="Taman Eden.html">Taman Eden 100</a></li>
+              <li><a class="dropdown-item" href="Pasput.html">Pantai Pasir Putih Parparean</a></li>
+              <li><a class="dropdown-item" href="Situmurun.html">Air Terjun Situmurun</a></li>
+              <li><a class="dropdown-item" href="Batu Gantung.html">Batu Gantung</a></li>
+              <li><a class="dropdown-item" href="Arum Jeram Parhitean.html">Arung Jeram Parhitean</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="../Kuliner.html">Kuliner</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="../Event.html">Event</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="../Tentang Kami.html">Tentang Kami</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+  <div class="album py-5 bg-body-tertiary">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="gambar/niagara2.jpeg" width="90%"" heigh=" 50%">
+            <div class="card-body">
+              <p class="card-text">
+              <h5>1. Niagara Hotel Lake Toba and Resort</h5>
+              Niagara Hotel Lake Toba & Resort menawarkan kamar-kamar yang
+              menyuguhkan pemandangan Danau Toba dengan akses WiFi berkecepatan tinggi gratis di semua kamar.Terdapat
+              kolam renang luar ruangan, hot tub, dan meja depan 24 jam dengan layanan pramutamu.
+              Kamar yang luas ber-AC dan menghadap pemandangan hijau subur, dilengkapi TV LED, ketel listrik, dan air
+              kemasan
+              gratis. Kamar mandi dilengkapi shower, pemanas air, dan
+              perlengkapan mandi. Beberapa kamar menawarkan balkon pribadi. Terdapat 3 restoran di hotel yang menyajikan
+              masakan lokal dan internasional. Terdapat taman bermain anak-anak dengan berbagai
+              kegiatan, seperti Flying Fox dan memetik buah di rumah kaca hotel. Juga terdapat lapangan tenis, lapangan
+              basket, dan jogging track. Tamu dapat bersepeda mengelilingi hotel
+              menikmati panorama Danau Toba dan Gunung Toba. Pulau Samosir dapat dicapai hanya terletak 2,8 km dari
+              hotel yang dapat dijangkau 30 menit dengan kapal feri. Para tamu juga dapat
+              mengunjungi Panatapan Parapat yang berjarak 6 km dan Taman Eden yang berjarak 16 km.
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="Niagara.html"><button type="button"
+                      class="btn btn-sm btn-outline-secondary">Lihat</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="gambar">
+              <img src="gambar/khas2.jpeg" width="85%"" heigh=" 50%">
+            </div>
+            <div class="card-body">
+              <p class="card-text">
+              <h5>2.KHAS Parapat</h5>
+              KHAS Parapat adalah resor bintang 3 tepi laut yang menawarkan akses ke pantai pribadi, restoran, dan ruang
+              karaoke. Anda dapat menikmati parkir
+              gratis dan WiFi dapat diakses di area umum. Kamar-kamar ber-AC-nya memiliki balkon, serta dilengkapi
+              dengan minibar, brankas, dan TV kabel layar datar, meja, area tempat duduk, dan
+              fasilitas membuat kopi/teh. Kamar mandi disediakan handuk, sandal, dan perlengkapan mandi
+              gratis. Hotel ini menawarkan 3 pilihan tempat bersantap, yang menyajikan berbagai hidangan internasional
+              dan lokal, selain itu sarapan prasmanan dan layanan kamar juga tersedia. Anda dapat bersantai dan
+              menikmati minuman panas di kedai kopi. Rumah Makan Marina menawarkan makanan Cina, berjarak 2 menit
+              berjalan kaki dari resor. LaToSu Cafe & Resto menyajikan masakan Amerika, berjarak 6 menit berkendara.
+              Layanan meja depan 24 jam, penyewaan mobil, meja layanan wisata, dan fasilitas
+              pertemuan. Anda juga dapat bersantai di
+              teras, berjalan-jalan di taman, dan menggunakan fasilitas barbekyu.Dekat dengan Batu Gantung dan Bukit
+              Senyum, Danau Toba Parapat dan Bandara Internasional Silangit.
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="KHAS.html"><button type="button" class="btn btn-sm btn-outline-secondary">Lihat</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="gambar/parapat1.jpeg" width="87%"" heigh=" 50%">
+            <div class="card-body">
+              <p class="card-text">
+              <h5>3. Parapat View Hotel</h5>
+              The Parapat View Hotel menawarkan pemandangan danau, taman, dan restoran. Setelah
+              seharian berjalan-jalan, para tamu dapat bersantai di kolam renang luar ruangan properti. WiFi tersedia
+              gratis di area umum.Kamar dilengkapi dengan
+              meja dan TV layar datar. Air kemasan gratis. Kamar mandi dalam tersedia shower, handuk, dan
+              perlengkapan mandi gratis. Beberapa kamar memiliki balkon, meja, dan area tempat duduk. Sarapan sudah
+              termasuk di semua kamar. Sarapan prasmanan menawarkan roti dan makanan Indonesia. Anda dapat menikmati
+              minuman dan pemandangan matahari terbenam di bar tepi
+              kolam renang. Hotel ini memiliki meja depan 24
+              jam dengan layanan parkir dan laundry di lokasi. Properti ini menyediakan layanan
+              pramutamu untuk membantu Anda dengan tiket dan informasi tentang acara dan hiburan lokal.Dekat dengan
+              bukit senyum, Batu Gantung dan Bandara Internasional Silangit. Transfer bandara tersedia dengan biaya
+              tambahan. Nikmati liburan Anda dengan orang terkasih bersama dengan Parapat View Hotel.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="Parapat View.html"><button type="button"
+                      class="btn btn-sm btn-outline-secondary">Lihat</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="gambar/toba1.jpeg" width="90%"" heigh=" 50%">
+            <div class="card-body">
+              <p class="card-text">
+              <h5>4.Danau Toba International Cottage Parapat</h5>
+              Danau Toba International Cottage Parapat Pelayanan memuaskan serta fasilitas hotel yang memadai akan
+              membuat Anda nyaman berada di Danau Toba International Cottage Parapat. Tersedia kolam renang. Manjakan
+              diri Anda dengan spa yang memberikan harga dan kualitas pelayanan terbaik. Resepsionis siap 24 jam untuk
+              melayani kebutuhan Anda.
+              Jangan ragu untuk menghubungi resepsionis, kami siap melayani Anda. Terdapat restoran yang menyajikan menu
+              lezat ala Danau Toba International Cottage Parapat khusus untuk Anda. WiFi tersedia di seluruh area publik
+              properti untuk membantu Anda tetap terhubung dengan keluarga dan teman.
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="Danau Toba International.html"><button type="button"
+                      class="btn btn-sm btn-outline-secondary">Lihat</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="pict">
+              <img src="gambar/juma2.jpg" width="90%"" heigh=" 40%">
+            </div>
+            <div class="card-body">
+              <p class="card-text">
+              <h5>5.Juma cottage</h5>
+              Juma cottage adalah sebuah guest house ramah lingkungan yang terletak di Tuk Tuk, dan memiliki taman.
+              Terdapat restoran di tempat dan parkir pribadi gratis.
+              Di guest house, unit-unitnya dilengkapi dengan balkon. Unit-unitnya dilengkapi dengan kamar mandi pribadi
+              dan teko, sementara beberapa kamar dilengkapi dengan teras dan yang lainnya juga memiliki pemandangan
+              pegunungan.Bandara terdekat adalah Bandara Internasional Sisingamangaraja XII, 130 km dari guest house.
+              Nikmati liburan Anda dengan orang tercinta bersama Juma Cottages yang memberikan Anda pelayanan yang
+              terbaik untuk Anda dan orang tercinta. </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="Juma.html"><button type="button" class="btn btn-sm btn-outline-secondary">Lihat</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="gambar/Tabo1.jpeg" width="90%"" heigh=" 50%">
+            <div class="card-body">
+              <p class="card-text">
+              <h5>6.Tabo Cottages Tuktuk Lake Toba</h5>
+              Tabo Cottages adalah hotel yang natural dengan pekarangan hijau yang luas dan kamar sebahagian dari bahan
+              daur ulang dari rumah tradisional. Terdapat pondok untuk santai dan menikmati
+              pemandangan danau dan gunung, Restoran dan bakery jerman . Makanan spesial adalah prasmanan
+              dengan khas lokal dan barat. Kopi adalah salah satu produk yang sangat kami banggakan karena kami
+              memanggang biji kopi lokal sendiri, maka kopi di Tabo sangat segar dan harum. Sering juga kami adakan aksi
+              linkungan bersama tamu2 dan coba
+              memperbaiki linkungan dan fasilitas seperti jalur treking secara relawan.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="Tabo.html"><button type="button" class="btn btn-sm btn-outline-secondary">Lihat</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="gambar/bobocabin1.jpeg" width="95%"" heigh=" 50%">
+            <div class="card-body">
+              <p class="card-text">
+              <h5>7. Bobocabin Signature Toba</h5>
+              Bobocabin Signature Toba, Medan menawarkan akomodasi di Parmonangan. Resor ini menawarkan pemandangan
+              danau, teras, resepsionis 24 jam, dan Wi-Fi gratis. Setiap kamar di resor ini dilengkapi dengan meja.
+              Kamar-kamarnya memiliki kamar mandi pribadi dengan bidet, perlengkapan mandi gratis, dan pengering rambut.
+              Di Bobocabin Signature Toba, Medan, setiap kamar memiliki area tempat duduk. Nikmati liburang Anda dengan
+              orang terkasih bersama Bobobcabin Signature Toba.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="Bobocabin.html"><button type="button"
+                      class="btn btn-sm btn-outline-secondary">Lihat</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="gambar/star1.jpeg" width="90%"" heigh=" 50%">
+            <div class="card-body">
+              <p class="card-text">
+              <h5>8. Star Beach Hotel</h5>
+              Starbeach Hotel terletak tepat di sebelah Danau Toba dengan pemandangan fantastis yang akan memanjakan
+              mata pelanggan kami. Tak hanya menikmati pemandangan, pelanggan kami juga diperbolehkan merasakan
+              kesegaran air Danau Toba tepat di depan hotel. Kami juga menyediakan penyewaan jetski dan perahu kepada
+              pelanggan kami agar liburan mereka lebih menyenangkan.Liburan Anda dengan orang terkasih akan
+              menyenangkan.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="Star Beach.html"><button type="button"
+                      class="btn btn-sm btn-outline-secondary">Lihat</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="gambar/bagus1.jpg" width="90%"" heigh=" 50%">
+            <div class="card-body">
+              <p class="card-text">
+              <h5>9. Bagus Bay Guest House</h5>
+              Bagus Bay Homestay menawarkan akomodasi dengan area tempat duduk di Tuk Tuk. Juga menyediakan
+              parkir pribadi gratis, keamanan sepanjang hari, dan Wi-Fi gratis, menyediakan kamar keluarga
+              dan teras. Setiap unit di guest house ini dilengkapi dengan seprai dan handuk. Anda dapat bersantap di
+              restoran hotel yang ramah keluarga, yang buka untuk makan malam, brunch, dan koktail. Anda dapat bermain
+              biliar di guest house. Anda juga dapat bersantai di taman.
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="Bagus Bay.html"><button type="button"
+                      class="btn btn-sm btn-outline-secondary">Lihat</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

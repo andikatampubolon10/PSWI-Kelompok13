@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+  <script src="../assets/js/color-modes.js"></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.118.2">
+  <title>Akomodasi</title>
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="akomodasi.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .col {
+      display: flex;
+
+    }
+
+    .navbar .dropdown-menu li a {
+      color: black !important;
+    }
+
+    .end {
+      margin-left: 40rem;
+    }
+
+    .container {
+      background-color: antiquewhite;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary header">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse nav justify-content-center" id="navbarNav">
+        <nav class="deep" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../Beranda.html">Beranda</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Bukit Gibeon</li>
+          </ol>
+        </nav>
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active text-dark" aria-current="page" href="../Beranda.html">Beranda</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Destinasi Wisata
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../Wisata/Bukit_Singgolom.html">Bukit Singgolom</a></li>
+              <li><a class="dropdown-item" href="../Wisata/Destinasi Wisata Bukit_Gibeon.html">Bukit Gibeon</a></li>
+              <li><a class="dropdown-item" href="../Wisata/Destinasi Wisata Geopark Kaldera Toba.html">Geopark Kaldera
+                  Toba</a></li>
+              <li><a class="dropdown-item" href="../Wisata/Destinasi Wisata Pantai Pakkodian.html">Pantai Pakkodian</a>
+              </li>
+              <li><a class="dropdown-item" href="../Wisata/Destinasi Wisata Sunset Beach.html">Sunset Beach</a></li>
+              <li><a class="dropdown-item" href="../Wisata/Destinasi Wisata Taman Eden 100.html">Taman Eden 100</a></li>
+              <li><a class="dropdown-item" href="../Wisata/Pantai_Pardinggaran.html">Pantai Pardinggaran</a></li>
+              <li><a class="dropdown-item" href="../Wisata/Pasput.html">Pantai Pasir Putih Parparean</a></li>
+              <li><a class="dropdown-item" href="../Wisata/Wisata Situmurun.html">Air Terjun Situmurun</a></li>
+              <li><a class="dropdown-item" href="../Wisata/Destinasi Wisata Batu Gantung.html">Batu Gantung</a></li>
+              <li><a class="dropdown-item" href="../Wisata/Destinasi Wisata Arung Jeram Parhitean.html">Arung Jeram
+                  Parhitean</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Akomodasi
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="Singgolom.html">Bukit Singgolom</a></li>
+              <li><a class="dropdown-item" href="Gibeon.html">Bukit Gibeon</a></li>
+              <li><a class="dropdown-item" href="Kaldera.html">Geopark Kaldera Toba</a></li>
+              <li><a class="dropdown-item" href="Pakkodian.html">Pantai Pakkodian</a></li>
+              <li><a class="dropdown-item" href="Sunset.html">Sunset Beach</a></li>
+              <li><a class="dropdown-item" href="Taman Eden.html">Taman Eden 100</a></li>
+              <li><a class="dropdown-item" href="Pasput.html">Pantai Pasir Putih Parparean</a></li>
+              <li><a class="dropdown-item" href="Situmurun.html">Air Terjun Situmurun</a></li>
+              <li><a class="dropdown-item" href="Batu Gantung.html">Batu Gantung</a></li>
+              <li><a class="dropdown-item" href="Arum Jeram Parhitean.html">Arung Jeram Parhitean</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="../Kuliner.html">Kuliner</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="../Event.html">Event</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="../Tentang Kami.html">Tentang Kami</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+  <div class="album py-5 bg-body-tertiary">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="gambar/bagus1.jpg" width="90%"" heigh=" 50%">
+            <div class="card-body">
+              <p class="card-text">
+              <h5>1. Bagus Bay Guest House</h5>
+              Bagus Bay Homestay menawarkan akomodasi dengan area tempat duduk di Tuk Tuk. Guest house ini menyediakan
+              parkir pribadi gratis, keamanan sepanjang hari, dan Wi-Fi gratis. Akomodasi ini menyediakan kamar keluarga
+              dan teras. Setiap unit di guest house ini dilengkapi dengan seprai dan handuk. Anda dapat bersantap di
+              restoran hotel yang ramah keluarga, yang buka untuk makan malam, brunch, dan koktail. Anda dapat bermain
+              biliar di guest house. Anda juga dapat bersantai di taman.
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="Bagus Bay Gibeon.html"><button type="button"
+                      class="btn btn-sm btn-outline-secondary">Lihat</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="gambar/juma2.jpg" width="87%"" heigh=" 50%">
+            <div class="card-body">
+              <p class="card-text">
+              <h5>2.Juma Cottages</h5>
+              Juma cottage adalah sebuah guest house ramah lingkungan yang terletak di Tuk Tuk, dan memiliki taman.
+              Terdapat restoran di tempat dan parkir pribadi gratis. Di guest house, unit-unitnya dilengkapi dengan
+              balkon. Unit-unitnya dilengkapi dengan kamar mandi pribadi dan teko, sementara beberapa kamar dilengkapi
+              dengan teras dan yang lainnya juga memiliki pemandangan pegunungan. Nikmati liburan Anda dengan orang
+              tercinta bersama Juma Cottages.
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="Juma Gibeon.html"><button type="button"
+                      class="btn btn-sm btn-outline-secondary">Lihat</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="gambar/nasha1.jpeg" width="90%"" heigh=" 50%">
+            <div class="card-body">
+              <p class="card-text">
+              <h5>3. My Nasha Tigaras</h5>
+              Nasha Tigaras simalungun saya terletak di daerah Tigaras-Simalungun. Terdapat beberapa tempat menarik di
+              sekitarnya, seperti bukit indah Simarjarunjung yang
+              berjarak sekitar 1,38 km. Nasha Tigaras saya adalah tempat menginap sempurna yang menyediakan fasilitas
+              layak serta layanan hebat. Meja depan 24 jam tersedia untuk melayani Anda, mulai dari check-in hingga
+              check-out, atau bantuan apa pun yang Anda
+              perlukan.Nasha Tigaras saya adalah pilihan ideal bagi Anda yang mencari kenyamanan.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="My Nasha.html"><button type="button"
+                      class="btn btn-sm btn-outline-secondary">Lihat</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="gambar/agung1.jpeg" width="90%"" heigh=" 50%">
+            <div class="card-body">
+              <p class="card-text">
+              <h5>4.Darma Agung Beach Hotel</h5>
+              Darma Agung Beach Hotel, mewarkan berbagai fasilitas dan kenyamanan. Kamar tamu menawarkan fasilitas
+              seperti kulkas, dan tamu dapat terhubung dengan internet menggunakan akses internet yang ditawarkan oleh
+              hotel. Darma Agung Beach Hotel menawarkan layanan kamar dan layanan concierge, sehingga pengalaman
+              menginap Anda lebih menyenangkan. Properti ini juga menawarkan restoran di tempat. Jika Anda suka makanan
+              Asia, Darma Agung Beach Hotel terletak dekat Restoran Istana Minang, LaToSu Cafe & Resto, dan WinTie
+              Coffee Shop. Staf di Darma Agung Beach Hotel berharap dapat melayani Anda selama kunjungan Anda mendatang.
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="Darma Agung.html"><button type="button"
+                      class="btn btn-sm btn-outline-secondary">Lihat</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="gambar/patra3.jpeg" width="95%"" heigh=" 50%">
+            <div class="card-body">
+              <p class="card-text">
+              <h5>5. Patra Comfort Parapat</h5>
+              Patra Comfort Parapat adalah pilihan terbaik bagi wisatawan yang mengunjungi Parapat, menawarkan banyak
+              fasilitas berguna yang dirancang untuk menyempurnakan pengalaman menginap Anda. Wi-fi gratis ditawarkan
+              untuk para tamu, dan kamar di Patra Comfort Parapat memiliki penyejuk udara dan meja. Selama Anda
+              menginap, gunakan fasilitas yang ditawarkan, seperti layanan kamar, layanan concierge, dan teras terbuka.
+              Tamu Patra Comfort Parapat juga dapat menikmati kolam renang dan restoran di properti. Bagi wisatawan yang
+              datang dengan mobil, tersedia parkir gratis. Jika Anda suka makanan cina, Patra Comfort Parapat terletak
+              dekat LaToSu Cafe & Resto. Nikmati masa menginap Anda di Parapat.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="Patra.html"><button type="button" class="btn btn-sm btn-outline-secondary">Lihat</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="gambar/sibigo1.jpeg" width="90%"" heigh=" 50%">
+            <div class="card-body">
+              <p class="card-text">
+              <h5>6.OYO 2379 Hotel Sibigo</h5>
+              Lakukan perjalanan terbaik Anda ke Samosir dengan standar Sanitized Stays yang dijanjikan, dan nikmati
+              Wi-Fi gratis di semua kamar. Berlokasi strategis di Samosir bagian Barat Samosir, yang menempatkan
+              Anda dekat dengan atraksi dan pilihan tempat makan yang menarik. Bonus tambahan, restoran
+              disediakan di lokasi untuk melayani kebutuhan Anda. Terletak di tepi Danau Toba, hotel ini
+              cukup baik dengan pemandangan danau toba yang indah. Kamarnya tergolong bersih dan harga kamarnya
+              tergolong sangat murah dan sudah termasuk sarapan Nasi Goreng.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="Sibigo.html"><button type="button" class="btn btn-sm btn-outline-secondary">Lihat</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="gambar/inn1.jpeg" width="90%"" heigh=" 50%">
+            <div class="card-body">
+              <p class="card-text">
+              <h5>7. Toledo Inn</h5>
+              Toledo Inn memiliki taman, teras, restoran, dan bar di Tuk Tuk. Wi-Fi gratis dan layanan kamar juga
+              disediakan. Setiap kamar di hotel ini dilengkapi dengan lemari pakaian. Setiap kamar memiliki kamar mandi
+              pribadi dengan shower, sementara kamar-kamar tertentu memiliki balkon dan yang lainnya juga menampilkan
+              pemandangan pegunungan. Di Toledo Inn, kamar-kamarnya mencakup meja dan TV layar datar. Pilihan sarapan
+              Asia dan halal tersedia setiap hari di akomodasi. Bandara terdekat adalah Bandara Internasional
+              Sisingamangaraja XII, 130 km dari Toledo Inn.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="Toledo Inn.html"><button type="button"
+                      class="btn btn-sm btn-outline-secondary">Lihat</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="gambar/Tabo1.jpeg" width="90%"" heigh=" 50%">
+            <div class="card-body">
+              <p class="card-text">
+              <h5>8. Tabo Cottages Tuktuk Lake Toba </h5>
+              Tabo Cottages adalah hotel yang natural dengan pekarangan hijau yang luas dan kamar sebahagian dari bahan
+              daur ulang dari rumah tradisional. Terdapat pondok untuk santai dan menikmati
+              pemandangan danau dan gunung, Restoran dan bakery jerman . Makanan spesial adalah prasmanan
+              dengan khas lokal dan barat. Kopi adalah salah satu produk yang sangat kami banggakan karena kami
+              memanggang biji kopi lokal sendiri, maka kopi di Tabo sangat segar dan harum. Sering juga kami adakan aksi
+              linkungan bersama tamu2 dan coba
+              memperbaiki linkungan dan fasilitas seperti jalur treking secara relawan.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="Tabo Gibeon.html"><button type="button"
+                      class="btn btn-sm btn-outline-secondary">Lihat</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="gambar/judita.jpeg" width="94%"" heigh=" 50%">
+            <div class="card-body">
+              <p class="card-text">
+              <h5>9. Judita Cottage </h5>
+              Judita Cottage memiliki area pantai pribadi, kolam renang outdoor, dan tempat parkir di areanya serta
+              kamar mandi pribadi. Akomodasi ini menampilkan pemandangan gunung dan danau. Akomodasi ini menyediakan
+              resepsionis 24 jam, antar-jemput bandara, dapur bersama, dan Wi-Fi gratis. Beberapa akomodasi memiliki
+              teras dan TV satelit layar datar,
+              serta area tempat duduk. Guest house ini menyajikan sarapan ala Amerika dan Asia, dan sarapan di kamar
+              juga tersedia. Terdapat sebuah kedai kopi,
+              dan tersedia makan siang. Anda dapat bermain tenis meja atau menyewa
+              sepeda dan mobil, sementara bersepeda dan memancing dapat dinikmati di dekatnya.
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="Judita.html"><button type="button" class="btn btn-sm btn-outline-secondary">Lihat</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
